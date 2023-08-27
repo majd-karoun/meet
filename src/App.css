@@ -1,38 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f5f7;
+  margin: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; 
+  max-width: 800px;
+  margin: 3% auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2% 5%;
+  overflow: hidden;
+}
+
+
+.App * {
+  box-sizing: border-box;
+  transition: all 0.3s ease-out; /* Animation */
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 5px 0;
+  color: #4a4a4a; /* Dark gray color for better readability */
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px 12px;
+  border-radius: 25px;
+  outline: none;
+  border: 2px solid #d1d1d1;
+  font-size: 14px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #a1dbea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.city {
+  max-width: 250px;
+}
+
+#city-search, #number-of-events {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.suggestions {
+  max-width: 250px;
+  position: absolute;
+  top: 45px;
+  z-index: 2;
+  margin: 0;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.suggestions > li {
+  background-color: #f7f7f7;
+  padding: 10px;
+  cursor: pointer;
+  color: #4a4a4a;
+}
+
+.suggestions > li:hover {
+  background-color: #e1e1e1;
+}
+
+.event {
+  background: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+
+
+.details-btn {
+  background-color: #5da89e; /* iOS-like blue color */
   color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-out; 
+  margin-top: 0px;
+  bottom: 10px;
+  right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.details-btn:hover {
+  background-color: #3c6f68;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.details {
+  background-color: #e1e1e1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
